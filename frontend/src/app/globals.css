@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  .ais-Snippet-highlighted {
+    color: black;
+    background-color: yellow;
+  }
+  
+  .ais-InfiniteHits-loadMore {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
