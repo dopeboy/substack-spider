@@ -21,7 +21,10 @@ const About = () => {
                     19963 articles indexed across tech, business, and crypto
                 </li>
                 <li>
-                    Built using django + react + typesense
+                    Summaries are done via GPT-3.5 Turbo
+                </li>
+                <li>
+                    Built using django + react + typesense. Hosted on Vercel
                 </li>
             </ul>
         </>
