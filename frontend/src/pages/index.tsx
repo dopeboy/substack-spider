@@ -88,7 +88,7 @@ const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
 const searchClient = typesenseInstantsearchAdapter.searchClient;
 
 const CustomResults = connectStateResults(
-    ({ searchState, searchResults, children }) => {
+    ({ searchState, searchResults, children }: any) => {
         if (Object.keys(searchState).length === 0 || searchState.query === '') {
             return null
         }
