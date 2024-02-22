@@ -27,7 +27,7 @@ const Hit = ({ hit }: any) => {
                 <Link href={hit.url} target="_blank">
                     {hit.url}
                 </Link>
-                {hit.summary && 
+                {hit.summary !== 'None' && 
                     <>
                         <span>&nbsp;|&nbsp;</span>
                         <Tippy placement={isBrowser ? "right" : "bottom"} content={<span>{hit.summary}</span>}>
