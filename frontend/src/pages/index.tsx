@@ -59,7 +59,7 @@ const CustomSearchBox = connectSearchBox(
                     <input autoFocus={true} onChange={(e) => refine(e.currentTarget.value)} type="search" id="default-search" className="block w-full p-4 ps-10 text-sm text-gray-900 focus:outline-none focus:border-blue-500 border border-gray-700 rounded-lg" placeholder="Search through the body of substack articles here..." required />
                 </div>
                 <p className="my-1 text-center text-xs italic text-gray-500 ">
-                    1234 articles indexed
+                    19963 articles indexed
                 </p>
             </form>
         )
