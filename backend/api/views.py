@@ -75,18 +75,20 @@ class PostViewSet(viewsets.ViewSet):
                             time.sleep(1)
                             r.raise_for_status()
                             html = r.json()["body_html"]
-                            soup = BeautifulSoup(html)
-                            print(post["title"])
-                            
-                            # Create a post
-                            Post.objects.create(
-                                title=post["title"],
-                                url=post["canonical_url"],
-                                subtitle=post["subtitle"],
-                                date_published=post["post_date"],
-                                category_id=current_category,
-                                content=self.remove_emojis(soup.get_text())
-                            )
+
+                            if html:
+                                soup = BeautifulSoup(html)
+                                print(post["title"])
+                                
+                                # Create a post
+                                Post.objects.create(
+                                    title=post["title"],
+                                    url=post["canonical_url"],
+                                    subtitle=post["subtitle"],
+                                    date_published=post["post_date"],
+                                    category_id=current_category,
+                                    content=self.remove_emojis(soup.get_text())
+                                )
         
         queryset = Post.objects.all()[0:1]
         serializer = PostSerializer(queryset, many=True)

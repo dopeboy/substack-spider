@@ -8,7 +8,6 @@ import { connectSearchBox } from "react-instantsearch-dom";
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
 import { isBrowser } from 'react-device-detect';
-import RootLayout from "../components/Layout/";
 
 
 const truncate = (str: string) => {
@@ -68,10 +67,10 @@ const CustomSearchBox = connectSearchBox(
 
 const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
     server: {
-        apiKey: "RCr5NodaWh5jr4KbpTg88J4PaAAhwGpP", // Be sure to use an API key that only allows search operations
+        apiKey: "NB1EKlrUMegWl0yOsJ0qv9JatuhbFXOl", // Be sure to use an API key that only allows search operations
         nodes: [
             {
-                host: "p2vgteflysaon14wp-1.a1.typesense.net",
+                host: "13ambfcsx2hqv5ezp-1.a1.typesense.net",
                 port: 443,
                 path: "",
                 protocol: "https",
